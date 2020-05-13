@@ -4,7 +4,7 @@
 double extractNumber(std::string sentence) {
 	double number = 0;
 	sentence.push_back('.');
-	for (int i = 0; i < sentence.size(); i++) {
+	for (int i = 0; i < (int)sentence.size(); i++) {
 		bool isDigit = false;
 		if (sentence[i] >= '0' && sentence[i] <= '9') {
 			isDigit = true;
@@ -154,7 +154,7 @@ void CommandPannel::startProgram(){
 				}
 				if (inFile) {
 					std::cout << "Successfully opened ";
-					for (int i = 0; i < NameOfFile.size()-4; i++) {
+					for (int i = 0; i < (int)NameOfFile.size()-4; i++) {
 						std::cout << NameOfFile[i];
 					}
 					std::cout << std::endl;
@@ -172,7 +172,7 @@ void CommandPannel::startProgram(){
 
 			if (strcmp(command, "save") == 0) {
 				std::cout << "Successfully saved the changes to ";
-				for (int i = 0; i < NameOfFile.size() - 4; i++) {
+				for (int i = 0; i < (int)NameOfFile.size() - 4; i++) {
 					std::cout << NameOfFile[i];
 				}
 				std::cout << std::endl;
@@ -199,7 +199,7 @@ void CommandPannel::startProgram(){
 				}
 				this->save(oFile, array);
 				std::cout << "Successfully saved the changes to ";
-				for (int i = 0; i < nameFile.size() - 4; i++) {
+				for (int i = 0; i < (int)nameFile.size() - 4; i++) {
 					std::cout << nameFile[i];
 				}
 				std::cout << std::endl;
